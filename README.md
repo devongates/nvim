@@ -10,7 +10,7 @@ The idea is that I use vim what it's best for: text editing without all the bloa
 - [ ] Linting and LSP
 - [ ] Jump to char plugin (probably [easymotion](https://github.com/easymotion/vim-easymotion))
 - [ ] [vim-which-key](https://github.com/liuchengxu/vim-which-key) integration
-- [ ] auto close parentheses
+- [x] [auto-close](https://github.com/jiangmiao/auto-pairs) parentheses
 - [x] [vim-surround](https://github.com/tpope/vim-surround)
 - [x] [gruvbox](https://github.com/ellisonleao/gruvbox.nvim) theme
 - [ ] [vim-startify](https://github.com/mhinz/vim-startify) welcome screen
