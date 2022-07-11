@@ -46,6 +46,7 @@ return packer.startup(function(use)
     use "jiangmiao/auto-pairs"      -- auto pairs
 
         -- cmp plugins --
+        -- https://github.com/hrsh7th/nvim-cmp
     use "hrsh7th/nvim-cmp" -- The completion plugin
     use "hrsh7th/cmp-buffer" -- buffer completions
     use "hrsh7th/cmp-path" -- path completions
