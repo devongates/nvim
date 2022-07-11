@@ -52,3 +52,17 @@ keymap("v", "p", '"_dP', opts)
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
+
+-- which-key
+
+local status, wk = pcall(require, "which-key")
+if not (status) then
+    vim.notify("couldn't load which-key, skipping mappings")
+    return
+end
+
+local which_key_map = {}
+
+which_key_map['w'] = {'<Cmd>w<CR>', 'save file'}
+
+wk.register(which_key_map, {prefix = '<leader>'})

@@ -2,8 +2,7 @@ local fn = vim.fn
 
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-    PACKER_BOOTSTRAP = fn.system {
+if fn.empty(fn.glob(install_path)) > 0 then PACKER_BOOTSTRAP = fn.system {
         "git",
         "clone",
         "--depth",
@@ -40,13 +39,19 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
+    -- Library used by many plugins
+--    use "nvim-lua/plenary.nvim"
+
+    -- Popup window used by many plugins
+--    use "nvim-lua/popup.nvim"
+
     use "wbthomason/packer.nvim"    -- Have packer manage itself
     use "ellisonleao/gruvbox.nvim"  -- Gruvbox theme
     use "tpope/vim-surround"        -- vim surround
     use "jiangmiao/auto-pairs"      -- auto pairs
 
-        -- cmp plugins --
-        -- https://github.com/hrsh7th/nvim-cmp
+    -- cmp plugins --
+    -- https://github.com/hrsh7th/nvim-cmp
     use "hrsh7th/nvim-cmp" -- The completion plugin
     use "hrsh7th/cmp-buffer" -- buffer completions
     use "hrsh7th/cmp-path" -- path completions
@@ -54,12 +59,18 @@ return packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
-        -- snippets --
+    -- snippets --
     use "L3MON4D3/LuaSnip" --snippet engine
 
-        -- lsp
+    -- lsp
     use "neovim/nvim-lspconfig" -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+
+    -- which-key
+    use { 
+        "folke/which-key.nvim",
+        config = "require('usr.which_key').config()",
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
