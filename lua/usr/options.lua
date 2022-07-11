@@ -65,3 +65,4 @@ vim.opt.formatoptions = vim.opt.formatoptions
     + "j" -- Auto-remove comments if possible.
     - "2" -- I'm not in gradeschool anymore
 
+vim.cmd([[colorscheme gruvbox]])
