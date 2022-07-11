@@ -14,5 +14,4 @@ The idea is that I use vim what it's best for: text editing without all the bloa
 - [x] [vim-surround](https://github.com/tpope/vim-surround)
 - [x] [gruvbox](https://github.com/ellisonleao/gruvbox.nvim) theme
 - [ ] [vim-startify](https://github.com/mhinz/vim-startify) welcome screen
-- [ ] use of nerdfont symbols
 - [ ] copilot integration
