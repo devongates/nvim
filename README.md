@@ -5,7 +5,7 @@ The idea is that I use vim what it's best for: text editing without all the bloa
 
 ### Goals:
 - [x] Optimized vim preferences and enhanced keybindings that make sense (i.e. disabling exiting visual mode after > or <)
-- [ ] Non text-edit-related commands are prefixed by <super> and suffixed mnemonically
+- [x] Non text-edit-related commands are prefixed by <super> and suffixed mnemonically
 - [ ] A simple file explorer (may just stick with netrw)
 - [x] Linting and LSP
 - [ ] Jump to char plugin (probably [hop.nvim](https://github.com/easymotion/vim-easymotion](https://github.com/phaazon/hop.nvim)
