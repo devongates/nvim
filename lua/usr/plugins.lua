@@ -43,6 +43,7 @@ return packer.startup(function(use)
     -- My plugins here
     use "wbthomason/packer.nvim"    -- Have packer manage itself
     use "ellisonleao/gruvbox.nvim"  -- Gruvbox theme
+    use "tpope/vim-surround"        -- vim surround
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
