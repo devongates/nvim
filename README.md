@@ -8,7 +8,7 @@ The idea is that I use vim what it's best for: text editing without all the bloa
 - [x] Non text-edit-related commands are prefixed by <super> and suffixed mnemonically
 - [x] A simple file explorer (may just stick with netrw)
 - [x] Linting and LSP
-- [ ] Jump to char plugin (probably [hop.nvim](https://github.com/phaazon/hop.nvim))
+- [x] Jump to char plugin (probably [hop.nvim](https://github.com/phaazon/hop.nvim))
 - [x] [vim-which-key](https://github.com/folke/which-key.nvim) integration
 - [x] [auto-close](https://github.com/jiangmiao/auto-pairs) parentheses
 - [x] [vim-surround](https://github.com/tpope/vim-surround)
