@@ -63,6 +63,36 @@ end
 
 local which_key_map = {}
 
-which_key_map['w'] = {'<Cmd>w<CR>', 'save file'}
+which_key_map["w"] = {"<Cmd>w<CR>", "save file"}
+which_key_map["q"] = {":q<CR>", "quit"}
+which_key_map["x"] = {"<Cmd>x<CR>", "save & quit"}
+which_key_map["."] = {"<Cmd>Explore<CR>", "explorer"}
+which_key_map['/'] = {':noh<CR>', 'no search hl'}
 
-wk.register(which_key_map, {prefix = '<leader>'})
+which_key_map.b = {
+    name = "+buffer",
+    k = {"<Cmd>bd<CR><Cmd>tabclose<CR>", "close"},
+    y = {"<Cmd>let @+=expand('%:p')<CR>", "yank path"},
+}
+
+-- tabs
+which_key_map.t = {
+    name = '+tabs',
+    n = {':tabnew<CR>', 'new'},
+    t = {':tabnew %<CR><C-o>', 'new current'},
+    o = {':tabonly<CR>', 'close others'},
+    c = {':tabclose<CR>', 'close'},
+}
+
+which_key_map.c = {
+    name = '+code',
+    D = {"<cmd>lua vim.lsp.buf.declaration()<CR>", "goto declaration"},
+    d = {"<cmd>lua vim.lsp.buf.definition()<CR>", "goto definition"},
+    s = {"<cmd>lua vim.lsp.buf.hover()<CR>", "summary"},
+    i = {"<cmd>lua vim.lsp.buf.implementation()<CR>", "implementation"},
+    S = {"<cmd>lua vim.lsp.buf.signature_help()<CR>", "signature"},
+    l = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', "line diagnostics"}
+}
+
+
+wk.register(which_key_map, {prefix = "<leader>"})
