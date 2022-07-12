@@ -66,7 +66,7 @@ local which_key_map = {}
 which_key_map["w"] = {"<Cmd>w<CR>", "save file"}
 which_key_map["q"] = {":q<CR>", "quit"}
 which_key_map["x"] = {"<Cmd>x<CR>", "save & quit"}
-which_key_map["."] = {"<Cmd>Explore<CR>", "explorer"}
+which_key_map["."] = {":NvimTreeToggle<CR>", "explorer"}
 which_key_map['/'] = {':noh<CR>', 'no search hl'}
 
 which_key_map.b = {
