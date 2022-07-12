@@ -94,5 +94,11 @@ which_key_map.c = {
     l = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', "line diagnostics"}
 }
 
+which_key_map.j = {
+    name = "+jump",
+    j = {"<cmd>HopChar1<CR>", "letter"},
+    J = {"<cmd>HopChar2<CR>", "2 letters"},
+    s = {"<cmd>HopPattern<CR>", "search"}
+}
 
 wk.register(which_key_map, {prefix = "<leader>"})

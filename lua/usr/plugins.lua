@@ -82,6 +82,9 @@ return packer.startup(function(use)
     -- nvim-tree
     use "kyazdani42/nvim-tree.lua"
 
+    -- hop-nvim
+    use "phaazon/hop.nvim"
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
