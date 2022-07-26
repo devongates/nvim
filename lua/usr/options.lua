@@ -1,3 +1,7 @@
+local t1 = { ".git", ".hg", ".svn", "*.pyc", "*.o", "*.out", "*.jpg", "*.jpeg", "*.png", "*.gif", "*.zip" }
+local t2 = { "**/node_modules/**", "**/bower_modules/**", "__pycache__", "*~", "*.DS_Store" }
+local t3 = { "**/undo/**", "*[Cc]ache/" }
+
 local options = {
     clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
     completeopt = { "menuone", "noselect" }, -- mostly just for cmp
@@ -25,16 +29,13 @@ local options = {
     number = true,                           -- set numbered lines
     relativenumber = true,                   -- set relative numbered lines
     signcolumn = "yes:1",                    -- always show the sign column, otherwise it would shift the text each time
-    wrap = false,                            -- display lines as one long line
     scrolloff = 8,                           -- is one of my fav
     sidescrolloff = 8,
     whichwrap = vim.opt.whichwrap:append "<>[]hl",
     iskeyword = vim.opt.iskeyword:append "-",
     listchars = { eol = "↲", tab = "▶ ", trail = "•", precedes = "«", extends = "»", nbsp = "␣", space = "." },
     syntax = "ON",        -- str:  Allow syntax highlighting
-    wildignore = { ".git", ".hg", ".svn", "*.pyc", "*.o", "*.out", "*.jpg", "*.jpeg", "*.png", "*.gif", "*.zip" },
-    wildignore = vim.opt.wildignore + { "**/node_modules/**", "**/bower_modules/**", "__pycache__", "*~", "*.DS_Store" },
-    wildignore = vim.opt.wildignore + { "**/undo/**", "*[Cc]ache/" },
+    wildignore = { unpack(t1), unpack(t2), unpack(t3) },
     wildignorecase = true,
     infercase = true,
     lazyredraw = true,
@@ -44,7 +45,6 @@ local options = {
     pumblend = 15,
     linebreak = true,
     wrap = true,
-    mouse = "a",
 }
 
 vim.opt.shortmess:append "c"

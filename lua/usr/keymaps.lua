@@ -23,8 +23,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
@@ -63,15 +61,21 @@ end
 
 local which_key_map = {}
 
-which_key_map["w"] = {"<Cmd>w<CR>", "save file"}
 which_key_map["q"] = {":q<CR>", "quit"}
 which_key_map["x"] = {"<Cmd>x<CR>", "save & quit"}
-which_key_map["."] = {":NvimTreeToggle<CR>", "explorer"}
+which_key_map["e"] = {":NvimTreeToggle<CR>", "explorer"}
 which_key_map['/'] = {':noh<CR>', 'no search hl'}
+which_key_map['R'] = {":so $MYVIMRC<CR>", 'reload config'}
+which_key_map['w'] = {"<Cmd>w<CR>", "save"}
+
+which_key_map.f = {
+    name = "+file",
+    s = {"<Cmd>w<CR>", "save"},
+}
 
 which_key_map.b = {
     name = "+buffer",
-    k = {"<Cmd>bd<CR><Cmd>tabclose<CR>", "close"},
+    k = {"<Cmd>bd<CR>", "kill"},
     y = {"<Cmd>let @+=expand('%:p')<CR>", "yank path"},
 }
 
