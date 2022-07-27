@@ -104,6 +104,9 @@ return packer.startup(function(use)
         after = { "copilot.lua", "nvim-cmp" },
     }
 
+    -- comment
+    use "numToStr/Comment.nvim"
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
