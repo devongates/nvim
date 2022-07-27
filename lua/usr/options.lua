@@ -65,3 +65,5 @@ vim.opt.formatoptions = vim.opt.formatoptions
     + "j" -- Auto-remove comments if possible.
     - "2" -- I'm not in gradeschool anymore
 
+vim.o.confirm = true
+vim.o.guifont = "JetBrainsMono Nerd Font Mono"

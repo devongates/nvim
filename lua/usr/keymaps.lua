@@ -67,6 +67,7 @@ which_key_map["e"] = {":NvimTreeToggle<CR>", "explorer"}
 which_key_map['/'] = {':noh<CR>', 'no search hl'}
 which_key_map['R'] = {":so $MYVIMRC<CR>", 'reload config'}
 which_key_map['w'] = {"<Cmd>w<CR>", "save"}
+which_key_map['j'] =  {"<cmd>HopChar1<CR>", "jump"}
 
 which_key_map.f = {
     name = "+file",
@@ -98,11 +99,11 @@ which_key_map.c = {
     l = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', "line diagnostics"}
 }
 
-which_key_map.j = {
-    name = "+jump",
-    j = {"<cmd>HopChar1<CR>", "letter"},
-    J = {"<cmd>HopChar2<CR>", "2 letters"},
-    s = {"<cmd>HopPattern<CR>", "search"}
+which_key_map.n = {
+    name = "+neovim",
+    k = {"<cmd>edit $HOME/.config/nvim/lua/usr/keymaps.lua<cr>", "open keymaps"},
+    o = {"<cmd>edit $HOME/.config/nvim/lua/usr/options.lua<cr>", "open options"},
+    p = {"<cmd>edit $HOME/.config/nvim/lua/usr/plugins.lua<cr>", "open plugins"},
 }
 
 wk.register(which_key_map, {prefix = "<leader>"})
