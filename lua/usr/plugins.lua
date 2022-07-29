@@ -39,12 +39,6 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-    -- Library used by many plugins
---    use "nvim-lua/plenary.nvim"
-
-    -- Popup window used by many plugins
---    use "nvim-lua/popup.nvim"
-
     use "wbthomason/packer.nvim"    -- Have packer manage itself
     use "ellisonleao/gruvbox.nvim"  -- Gruvbox theme
     use "tpope/vim-surround"        -- vim surround
@@ -109,6 +103,18 @@ return packer.startup(function(use)
 
     -- title screen
     use 'goolord/alpha-nvim'
+
+    -- color schemes
+    use "projekt0n/github-nvim-theme"
+
+    -- icons
+    use "kyazdani42/nvim-web-devicons"
+
+    -- telescope
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
